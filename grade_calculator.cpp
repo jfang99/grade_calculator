@@ -37,6 +37,7 @@ void grade_calculator::update_score(){
 }
 
 void grade_calculator::compute_overall_A(){
+    grade=0.0;
     int hw1=ui->spinBox->value();
     int hw2=ui->spinBox_2->value();
     int hw3=ui->spinBox_3->value();
@@ -54,7 +55,7 @@ void grade_calculator::compute_overall_A(){
     for(int i=0;i<8;i++){
         homework+=vec[i];
     }
-    homework-=vec[min];
+    homework-=min;
     double hw=homework/700.0*25;
 
     int midterm1=ui->spinBox_9->value();
@@ -69,6 +70,7 @@ void grade_calculator::compute_overall_A(){
 }
 
 void grade_calculator::compute_overall_B(){
+    grade=0.0;
     int hw1=ui->spinBox->value();
     int hw2=ui->spinBox_2->value();
     int hw3=ui->spinBox_3->value();
@@ -86,7 +88,7 @@ void grade_calculator::compute_overall_B(){
     for(int i=0;i<8;i++){
         homework+=vec[i];
     }
-    homework-=vec[min];
+    homework-=min;
     double hw=homework/700.0*25;
 
     int midterm1=ui->spinBox_9->value();
